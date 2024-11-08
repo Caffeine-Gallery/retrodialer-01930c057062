@@ -1,0 +1,16 @@
+type Phone = 
+ record {
+   color: text;
+   description: text;
+   id: text;
+   image: text;
+   name: text;
+   price: nat;
+   storage: text;
+   url: text;
+ };
+service : {
+  getPhone: (text) -> (opt Phone) query;
+  getPhones: () -> (vec Phone) query;
+  searchPhones: (text) -> (vec Phone) query;
+}
